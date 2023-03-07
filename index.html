@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora financeira</title>
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <form>
+                <label for="input_peso">
+                    Digite o peso:
+                    <input type="number" placeholder="Peso(ex: kg)" min="1" name="input_peso" id="input_peso">
+                </label>
+                <button type="button" onclick="calcular()">Calcular</button>
+            </form>
+            <div id="mensagem"></div>
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    function calcular(){
+        var peso = Number(input_peso.value);
+        var desperdicio = peso * 0.33;
+        var valor = desperdicio * 42;
+        mensagem.innerHTML = `Você terá um desperdício de ${desperdicio}kg e um débito de R$${valor}`;
+        mensagem.innerHTML += `<br>Com a nossa solução você pode evitar até 50% do desperdício`  
+    }
+</script>
